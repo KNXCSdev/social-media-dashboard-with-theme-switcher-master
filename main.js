@@ -14,6 +14,7 @@ const disabledarkMode = () => {
 
 if (darkMode === "enabled") {
   enabledarkMode();
+  darkModeSwitcher.checked = true;
 }
 
 darkModeSwitcher.addEventListener("change", () => {
