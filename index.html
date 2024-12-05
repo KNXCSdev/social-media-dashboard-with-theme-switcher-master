@@ -6,17 +6,17 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
-    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | [Social Media Dashboard]</title>
   </head>
   <body>
     <div class="dashboard container">
       <header class="header">
-        <div class="dashboard__total">
+        <div class="header__total">
           <h1 class="primary-heading">Social Media Dashboard</h1>
-          <p class="followers">Total Followers 23,004</p>
+          <p class="followers-total">Total Followers 23,004</p>
         </div>
-        <div class="dashboard__switch">
+        <div class="header__switch">
           <span>Dark Mode</span>
           <label class="switch">
             <input type="checkbox" aria-label="Enable dark mode" id="dark-mode-switch" />
@@ -24,169 +24,184 @@
           </label>
         </div>
       </header>
-      <div class="dashboard__socials">
-        <div class="socials">
-          <img src="images/icon-facebook.svg" alt="Facebook icon" />
-          <span class="socials__name">@nathanf</span>
-        </div>
-        <div class="followers">
-          <p class="followers__count">1987</p>
-          <p class="followers__description">FOLLOWERS</p>
-        </div>
-        <div class="today">
-          <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data">12 Today</span>
-        </div>
-      </div>
 
-      <div class="dashboard__socials">
-        <div class="socials">
-          <img src="images/icon-twitter.svg" alt="Twitter icon" />
-          <span class="socials__name">@nathanf</span>
+      <div class="socials grid">
+        <div class="socials__block socials__fb">
+          <div class="socials__header">
+            <img src="images/icon-facebook.svg" alt="Facebook icon" />
+            <span class="socials__name">@nathanf</span>
+          </div>
+          <div class="followers">
+            <p class="followers__count">1987</p>
+            <p class="followers__description">FOLLOWERS</p>
+          </div>
+          <div class="today">
+            <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data">12 Today</span>
+          </div>
         </div>
-        <div class="followers">
-          <p class="followers__count">1044</p>
-          <p class="followers__description">FOLLOWERS</p>
-        </div>
-        <div class="today">
-          <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data">99 Today</span>
-        </div>
-      </div>
 
-      <div class="dashboard__socials">
-        <div class="socials">
-          <img src="images/icon-instagram.svg" alt="Instagram icon" />
-          <span class="socials__name">@realnathanf</span>
+        <div class="socials__block socials__fb">
+          <div class="socials__header">
+            <img src="images/icon-twitter.svg" alt="Twitter icon" />
+            <span class="socials__name">@nathanf</span>
+          </div>
+          <div class="followers">
+            <p class="followers__count">1044</p>
+            <p class="followers__description">FOLLOWERS</p>
+          </div>
+          <div class="today">
+            <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data">99 Today</span>
+          </div>
         </div>
-        <div class="followers">
-          <p class="followers__count">11k</p>
-          <p class="followers__description">FOLLOWERS</p>
-        </div>
-        <div class="today">
-          <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data">1099 Today</span>
-        </div>
-      </div>
 
-      <div class="dashboard__socials">
-        <div class="socials">
-          <img src="images/icon-facebook.svg" alt="Facebook icon" />
-          <span class="socials__name">Nathan F.</span>
+        <div class="socials__block socials__ig">
+          <div class="socials__header">
+            <img src="images/icon-instagram.svg" alt="Instagram icon" />
+            <span class="socials__name">@realnathanf</span>
+          </div>
+          <div class="followers">
+            <p class="followers__count">11k</p>
+            <p class="followers__description">FOLLOWERS</p>
+          </div>
+          <div class="today">
+            <img src="images/icon-up.svg" alt="Up arrow" /><span class="today__data"
+              >1099 Today</span
+            >
+          </div>
         </div>
-        <div class="followers">
-          <p class="followers__count">8239</p>
-          <p class="followers__description">SUBSCRIBERS</p>
-        </div>
-        <div class="today">
-          <img src="images/icon-down.svg" alt="Down arrow" /><span class="today__data"
-            >144 Today</span
-          >
+
+        <div class="socials__block socials__yt">
+          <div class="socials__header">
+            <img src="images/icon-youtube.svg" alt="Youtube icon" />
+            <span class="socials__name">Nathan F.</span>
+          </div>
+          <div class="followers">
+            <p class="followers__count">8239</p>
+            <p class="followers__description">SUBSCRIBERS</p>
+          </div>
+          <div class="today">
+            <img src="images/icon-down.svg" alt="Down arrow" /><span
+              class="today__decrease percent__down"
+              >144 Today</span
+            >
+          </div>
         </div>
       </div>
 
       <div class="dashboard__overview">
-        <p class="overview">Overview Today</p>
+        <h2 class="secondary-heading">Overview - Today</h2>
       </div>
 
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Page Views</p>
-          <img src="images/icon-facebook.svg" alt="Facebook icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">87</p>
-          <div class="summary__arrow">
-            <img src="images/icon-up.svg" alt="Up arrow" />
-            <p class="summary__percent">3%</p>
+      <div class="overview grid">
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Page Views</p>
+            <img src="images/icon-facebook.svg" alt="Facebook icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">87</p>
+            <div class="summary__arrow">
+              <img src="images/icon-up.svg" alt="Up arrow" />
+              <p class="summary__percent">3%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Likes</p>
-          <img src="images/icon-facebook.svg" alt="Facebook icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">52</p>
-          <div class="summary__arrow">
-            <img src="images/icon-down.svg" alt="Down arrow" />
-            <p class="summary__percent">2%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Likes</p>
+            <img src="images/icon-facebook.svg" alt="Facebook icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">52</p>
+            <div class="summary__arrow">
+              <img src="images/icon-down.svg" alt="Down arrow" />
+              <p class="summary__percent percent__down">2%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Likes</p>
-          <img src="images/icon-instagram.svg" alt="Instagram icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">5462</p>
-          <div class="summary__arrow">
-            <img src="images/icon-up.svg" alt="Up arrow" />
-            <p class="summary__percent">2257%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Likes</p>
+            <img src="images/icon-instagram.svg" alt="Instagram icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">5462</p>
+            <div class="summary__arrow">
+              <img src="images/icon-up.svg" alt="Up arrow" />
+              <p class="summary__percent">2257%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Profile Views</p>
-          <img src="images/icon-instagram.svg" alt="Instagram icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">52K</p>
-          <div class="summary__arrow">
-            <img src="images/icon-up.svg" alt="Up arrow" />
-            <p class="summary__percent">1375%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Profile Views</p>
+            <img src="images/icon-instagram.svg" alt="Instagram icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">52K</p>
+            <div class="summary__arrow">
+              <img src="images/icon-up.svg" alt="Up arrow" />
+              <p class="summary__percent">1375%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Retweets</p>
-          <img src="images/icon-twitter.svg" alt="Twitter icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">117</p>
-          <div class="summary__arrow">
-            <img src="images/icon-up.svg" alt="Up arrow" />
-            <p class="summary__percent">303%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Retweets</p>
+            <img src="images/icon-twitter.svg" alt="Twitter icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">117</p>
+            <div class="summary__arrow">
+              <img src="images/icon-up.svg" alt="Up arrow" />
+              <p class="summary__percent">303%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Likes</p>
-          <img src="images/icon-twitter.svg" alt="Twitter icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">507</p>
-          <div class="summary__arrow">
-            <img src="images/icon-up.svg" alt="Up arrow" />
-            <p class="summary__percent">553%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Likes</p>
+            <img src="images/icon-twitter.svg" alt="Twitter icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">507</p>
+            <div class="summary__arrow">
+              <img src="images/icon-up.svg" alt="Up arrow" />
+              <p class="summary__percent">553%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Likes</p>
-          <img src="images/icon-youtube.svg" alt="Youtube icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">107</p>
-          <div class="summary__arrow">
-            <img src="images/icon-down.svg" alt="Down arrow" />
-            <p class="summary__percent">19%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Likes</p>
+            <img src="images/icon-youtube.svg" alt="Youtube icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">107</p>
+            <div class="summary__arrow">
+              <img src="images/icon-down.svg" alt="Down arrow" />
+              <p class="summary__percent percent__down">19%</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dashboard__summary">
-        <header class="header__summary">
-          <p class="header__description">Total Views</p>
-          <img src="images/icon-youtube.svg" alt="Youtube icon" />
-        </header>
-        <div class="summary">
-          <p class="summary__count">87</p>
-          <div class="summary__arrow">
-            <img src="images/icon-down.svg" alt="Down arrow" />
-            <p class="summary__percent">12%</p>
+
+        <div class="overview__summary">
+          <header class="header__summary">
+            <p class="header__description">Total Views</p>
+            <img src="images/icon-youtube.svg" alt="Youtube icon" />
+          </header>
+          <div class="summary">
+            <p class="summary__count">87</p>
+            <div class="summary__arrow">
+              <img src="images/icon-down.svg" alt="Down arrow" />
+              <p class="summary__percent percent__down">12%</p>
+            </div>
           </div>
         </div>
       </div>
