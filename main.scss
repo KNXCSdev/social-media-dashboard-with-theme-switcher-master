@@ -18,19 +18,20 @@
 
   //#### Dark Theme
 
-  --VeryDarkBlue: hsl(230, 17%, 14%); //(BG)
-  --VeryDarkBlue: hsl(232, 19%, 15%); //(Top BG Pattern)
-  --DarkDesaturatedBlue: hsl(228, 28%, 20%); //(Card BG)
-  --DesaturatedBlue: hsl(228, 34%, 66%); //(Text)
-  --White: hsl(0, 0%, 100%); //(Text)
-
   //  #### Light Theme
+  --bg: hsl(0, 0%, 100%); //(BG)
+  --card-bg: hsl(227, 47%, 96%); // (Card BG)
+  --text-color: hsl(228, 12%, 44%); // (Text)
+  --text2-color: hsl(230, 17%, 14%); // (Text)
+  --hover: #e1e3f0;
+}
 
-  --White: hsl(0, 0%, 100%); //(BG)
-  --VeryPaleBlue: hsl(225, 100%, 98%); // (Top BG Pattern)
-  --LightGrayishBlue: hsl(227, 47%, 96%); // (Card BG)
-  --DarkGrayishBlue: hsl(228, 12%, 44%); // (Text)
-  --VeryDarkBlue: hsl(230, 17%, 14%); // (Text)
+.darkMode {
+  --bg: hsl(230, 17%, 14%); //(BG)
+  --card-bg: hsl(228, 28%, 20%); //(Card BG)
+  --text-color: hsl(228, 34%, 66%); //(Text)
+  --text2-color: hsl(0, 0%, 100%); //(Text)
+  --hover: #333a56;
 }
 
 html {
@@ -47,7 +48,7 @@ body {
   line-height: 1;
   font-family: sans-serif;
   font-size: 1.6rem;
-  background-color: var(--White);
+  background-color: var(--bg);
 }
 
 .container {
@@ -55,6 +56,16 @@ body {
   margin: 5rem auto;
 }
 
+.primary-heading {
+  color: var(--text2-color);
+}
+.secondary-heading {
+  font-size: 3rem;
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+  color: var(--text2-color);
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -79,15 +90,20 @@ body {
     gap: 0.75rem;
     margin: 1.5rem 0 1.5rem 0;
     position: relative;
+    color: var(--text2-color);
   }
 }
 
 .socials {
   margin-bottom: 6.4rem;
   &__block {
-    background-color: var(--LightGrayishBlue);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
+
+    &:hover {
+      background-color: var(--hover);
+    }
   }
   &__header {
     display: flex;
@@ -95,7 +111,7 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 1.4rem;
-    color: var(--DarkGrayishBlue);
+    color: var(--text-color);
     margin-bottom: 2rem;
     font-weight: 600;
   }
@@ -111,6 +127,10 @@ body {
   &__yt {
     border-top: 5px solid var(--YouTube);
   }
+
+  &__tw {
+    border-top: 5px solid var(--Twitter);
+  }
 }
 
 .followers {
@@ -119,16 +139,23 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
+
+  &__total {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
   &__count {
     font-size: 6.4rem;
     font-weight: 600;
+    color: var(--text2-color);
   }
 
   &__description {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 500;
-    color: var(--DarkGrayishBlue);
+    color: var(--text-color);
     font-weight: 400;
     margin-bottom: 4rem;
   }
@@ -147,18 +174,14 @@ body {
   }
 }
 
-.secondary-heading {
-  font-size: 3rem;
-  font-weight: 600;
-  color: var(--DarkGrayishBlue);
-  margin-bottom: 2rem;
-}
-
 .overview {
   &__summary {
-    background-color: var(--LightGrayishBlue);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
+    &:hover {
+      background-color: var(--hover);
+    }
   }
 }
 
@@ -167,7 +190,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.8rem;
-  color: var(--DarkGrayishBlue);
+  color: var(--text-color);
   margin-bottom: 3rem;
   font-weight: 500;
 }
@@ -180,6 +203,7 @@ body {
   &__count {
     font-size: 4rem;
     font-weight: 600;
+    color: var(--text2-color);
   }
 
   &__arrow {
@@ -232,7 +256,28 @@ body {
   bottom: 0.25rem;
   height: 1.55rem;
   width: 1.55rem;
-  background: var(--White);
+  background: var(--bg);
   border-radius: 50%;
   transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 60em) {
+  .container {
+    max-width: 90%;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
